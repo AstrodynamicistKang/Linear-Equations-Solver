@@ -325,8 +325,12 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         print('Conclusion: The solution is x = ' + str(x0) + '.')
 
     elif (PL == True):
-        print()
-        print("Conclusion: The 2 lines are parallel and they never intersect each other in Euclidean space.")
+        if (a == c) and (b != d):
+            print()
+            print("Conclusion: The 2 lines are parallel. They never intersect each other in Euclidean space. There is no solution.")
+        else:
+            print()
+            print("Conclusion: The 2 lines are exactly the same! They have infinitely many solutions.)
 
     elif ((PIS == True) and (PD == False)):
         print()
