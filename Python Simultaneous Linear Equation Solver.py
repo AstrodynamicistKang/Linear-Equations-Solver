@@ -19,7 +19,7 @@ while confirm_input == '':
         a = ''
         while a == '':
             print('a = ', end = '')
-            a = eval(input())
+            a = input()
             if a == '':
                 print('Please enter a value for a.')
 
@@ -28,7 +28,7 @@ while confirm_input == '':
         b = ''
         while b == '':
             print('b = ', end = '')
-            b = eval(input())
+            b = input()
             if b == '':
                 print('Please enter a value for b.')
                 
@@ -38,75 +38,16 @@ while confirm_input == '':
         
         while c == '':
             print('c = ', end = '')
-            c = eval(input())
-            
+            c = input()
             if (str(c) != ''):
                 if (float(a) == (float(0)) and (float(c) == float(0))):
                     print()
                     print('Since a = 0, c MUST NOT equal to 0 or there will be no 2 simultaneous linear equations to be solved. An infinite loop will result.')
                     print()
-                    print('Please reenter a value for a and c respectively, in case you need to change the value for a')
-                    print()
-
-                    a = ''
-                    while a == '':
-                        print('a = ', end = '')
-                        a = eval(input())
-                        if a == '':
-                            print('Please enter a value for a.')
-                    a = float(a)
-                            
+                    print('Please try again.')
                     c = ''
-                    while c == '':
-                        print('c = ', end = '')
-                        c = eval(input())
-
-                        if (str(c) != ''):
-                            if (float(a) == (float(0)) and (float(c) == float(0))):
-                                print()
-                                print('Since a = 0, c MUST NOT equal to 0 or there will be no 2 simultaneous linear equations to be solved. An infinite loop will result.')
-                                print()
-                                print('Please reenter a value for a and c respectively, in case you need to change the value for a')
-                                print()
-
-                                a = ''
-                                while a == '':
-                                    print('a = ', end = '')
-                                    a = eval(input())
-                                    if a == '':
-                                        print('Please enter a value for a.')
-                                a = float(a)
-                                        
-                                c = ''
-                                while c == '':
-                                    print('c = ', end = '')
-                                    c = eval(input())
-                                    if c == '':
-                                        print('Please enter a value for c.')
-                                if c == '':
-                                    print('Please enter a value for c.')
-                                if (float(a) == (float(0)) and (float(c) == float(0))):
-                                    while True:
-                                        print('STOP Playing a Fool!')
-                                print()
-                                print('Let\'s continue with the original d-value in the equation y = cx + d.\nPlease enter a value for d.')
-                                a = float(a)
-                                c = float(c)         
-                                break
-                            
-                        if c == '':
-                            print('Please enter a value for c.')
-                        print()
-                        print('Let\'s continue with the original d-value in the equation y = cx + d.\nPlease enter a value for d.')
-                if c == '':
+            if c == '':
                     print('Please enter a value for c.')
-                
-                a = float(a)
-                c = float(c)         
-                break
-
-            else :
-                print('Please enter a value for c.')
 
         a = float(a)
         c = float(c)
@@ -114,61 +55,69 @@ while confirm_input == '':
         d = ''
         while d == '':
             print('d = ', end = '')
-            d = eval(input())
+            d = input()
             if d == '':
                 print('Please enter a value for b.')
                 
         d = float(d)
 
-        print()
-        print('The equations are y = ' + str(a) + 'x+' + str(b) + ' and y = ' + str(c) + 'x+' + str(d) + '.')
-        print()
-        print('Confirm inputs? Y/N')
+        confirm_input = 'Try Again'
+        while confirm_input == 'Try Again' :
+            print()
+            print('The equations are y = ' + str(a) + 'x+' + str(b) + ' and y = ' + str(c) + 'x+' + str(d) + '.')
+            print()
+            print('Confirm inputs? Y/N')
 
-        confirm_input = str(input())
+            confirm_input = str(input())
+            
+            if confirm_input == 'n' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'no' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'No' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'nO' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'NO' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'N' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'y' :
+                break
+            elif confirm_input == 'yes' :
+                break
+            elif confirm_input == 'Yes' :
+                break
+            elif confirm_input == 'YEs' :
+                break
+            elif confirm_input == 'YeS' :
+                break
+            elif confirm_input =='YES' :
+                break
+            elif confirm_input =='Y' :
+                break
+            else :
+                print()
+                print('Invalid input. Please enter yes/no.')
+                confirm_input = 'Try Again'
+                continue
+            
+        if confirm_input == '' :
+            print()
+            continue
 
-        if confirm_input == 'n' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'no' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'No' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'nO' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'NO' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'N' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'y' :
-            break
-        elif confirm_input == 'yes' :
-            break
-        elif confirm_input == 'Yes' :
-            break
-        elif confirm_input == 'YEs' :
-            break
-        elif confirm_input == 'YeS' :
-            break
-        elif confirm_input =='YES' :
-            break
-        elif confirm_input =='Y' :
-            break
-        else :
-            print('Stop fooling around!')
-            confirm_input = ''
-            continue
 
-        # 'y' or 'yes' or 'Yes' or 'YEs' or 'YeS' or 'YeS' or 'YES' or 'Y' or 'n' or 'no' or 'No' or 'nO' or 'NO' or 'N' (Too lazy to copy so many words. So keep them here in case I need them.)
+    # 'y' or 'yes' or 'Yes' or 'YEs' or 'YeS' or 'YeS' or 'YES' or 'Y' or 'n' or 'no' or 'No' or 'nO' or 'NO' or 'N' (Too lazy to copy so many words. So keep them here in case I need them.)
 
     print()
 
-    print("""This solver works by inspcting convergence and divergence of y-values (delta y) for a given delta x. Convergence leads to a solution \
+    print("""This solver works by inspecting convergence and divergence of y-values (delta y) for a given delta x. Convergence leads to a solution \
 and divergence indicates no solution is present. Solution is the x-value obtained when the corresponding delta y is zero.""")
 
     print()
@@ -176,19 +125,24 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
     confirm_input = ''
 
     while confirm_input == '' :
-        print('To begin with, please enter an x0-value (initial x-value), configure the the step size (dx) and span (sp).')
+        print('Please enter an x0-value (initial x-value), configure the the step size (dx) and span (sp).')
         print()
 
-        print('x0 = ', end = '')
-        x0 = eval(input())
+        x0 = ''
+        while x0 == '':
+            print('x0 = ', end = '')
+            x0 = input()
+            if x0 == '':
+                print('Please enter a value for x0.')
+                
         x0 = float(x0)
 
         dx = ''
         while dx == '' or float(0):
             print('dx = ', end = '')
-            dx = eval(input())
-            if dx == ('') :
-                print('Please enter a value for x.')
+            dx = input()
+            if dx == '' :
+                print('Please enter a value for dx.')
             elif (float(dx) == float(0)):
                 print('dx MUST never be zero or the solver cannot proceed. An infinite loop will result!')
                 dx = ''
@@ -198,58 +152,64 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         sp = ''
         while sp == '' or ((float(sp)) < (float(dx))):
             print('sp = ', end = '')
-            sp = abs(eval(input()))      
+            sp = input()      
             if sp == ('') :
-                print('Please enter a value for x.')
+                print('Please enter a value for sp.')
             elif ((float(sp)) < ((float(dx)))):
                 print('sp MUST never be less than dx or the solver cannot proceed.')
                 sp = ''
                 
         sp = float(sp)
-        
-        print()
 
-        print('You initiated x0 = ' + str(x0) + ' step size dx = ' + str(dx) + ' and span, sp = ' + str(sp) + '.')
-        print('It is strongly advisable to begin with a large sp for extreme constant values of a, b, c and d, or the solution may not converge.')  
-        print('Confirm inputs? Y/N')
+        confirm_input = 'Try Again'
+        while confirm_input == 'Try Again' :
+            print()
+            print('You initiated x0 = ' + str(x0) + ', step size dx = ' + str(dx) + ' and span, sp = ' + str(sp) + '.')
+            print('It is strongly advisable to begin with a large sp for extreme constant values of a, b, c and d, or the solution may not converge.')  
+            print('Confirm inputs? Y/N')
 
-        confirm_input = str(input())
+            confirm_input = str(input())
 
-        if confirm_input == 'n' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'no' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'No' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'nO' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'NO' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'N' :
-            confirm_input = ''
-            continue
-        elif confirm_input == 'y' :
-            break
-        elif confirm_input == 'yes' :
-            break
-        elif confirm_input == 'Yes' :
-            break
-        elif confirm_input == 'YEs' :
-            break
-        elif confirm_input == 'YeS' :
-            break
-        elif confirm_input =='YES' :
-            break
-        elif confirm_input =='Y' :
-            break
-        else :
-            print('Stop fooling around!')
-            confirm_input = ''
+            if confirm_input == 'n' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'no' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'No' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'nO' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'NO' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'N' :
+                confirm_input = ''
+                break
+            elif confirm_input == 'y' :
+                break
+            elif confirm_input == 'yes' :
+                break
+            elif confirm_input == 'Yes' :
+                break
+            elif confirm_input == 'YEs' :
+                break
+            elif confirm_input == 'YeS' :
+                break
+            elif confirm_input =='YES' :
+                break
+            elif confirm_input =='Y' :
+                break
+            else :
+                print()
+                print('Invalid input. Please enter yes/no.')
+                confirm_input = 'Try Again'
+                continue
+
+        if confirm_input == '' :
+            print()
             continue
 
     print()
@@ -388,55 +348,12 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         print()
         print('Conclusion: There is a solution in between (x0 - sp) and (xo + sp), but your step size is too large, and the solver miss the solution altogether.')
         print('Reduce your step size!')
-        
-    print()
-    print('Thanks for trying out the program. Would you like to try the program again with other values.? Y/N')
 
-    confirm_input = str(input())
-
-    if confirm_input == 'n' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'no' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'No' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'nO' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'NO' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'N' :
-        print('Have a nice day then!')
-        break
-    elif confirm_input == 'y' :
-        confirm_input = ''
-        continue
-    elif confirm_input == 'yes' :
-        confirm_input = ''
-        continue
-    elif confirm_input == 'Yes' :
-        confirm_input = ''
-        continue
-    elif confirm_input == 'YEs' :
-        confirm_input = ''
-        continue
-    elif confirm_input == 'YeS' :
-        confirm_input = ''
-        continue
-    elif confirm_input =='YES' :
-        confirm_input = ''
-        continue
-    elif confirm_input =='Y' :
-        confirm_input = ''
-        continue
-    else :
-        print('Stop fooling around!')
+    confirm_input = 'Try Again'
+    while confirm_input == 'Try Again':
         print()
-        print('Would you like to try the program again with other values? Y/N')
+        print('Thanks for trying out the program. Would you like to try the program again with other values.? Y/N')
+
         confirm_input = str(input())
 
         if confirm_input == 'n' :
@@ -459,25 +376,31 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
             break
         elif confirm_input == 'y' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input == 'yes' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input == 'Yes' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input == 'YEs' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input == 'YeS' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input =='YES' :
             confirm_input = ''
-            continue
+            break
         elif confirm_input =='Y' :
             confirm_input = ''
-            continue
+            break
         else :
-            while True:
-                print('STOP Playing a Fool!')
+            print()
+            print("Invalid input. Please enter 'Yes' or No'.")
+            confirm_input = 'Try Again'
+            continue
+        
+    if confirm_input == '':
+        print()
+        continue
