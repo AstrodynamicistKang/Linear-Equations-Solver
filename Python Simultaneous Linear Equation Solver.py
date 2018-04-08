@@ -1,4 +1,4 @@
-# This is just a test of Python programming skills. :)
+# This is just a test of Python programming skill. :)
 # Created using Python 3.6.5
 # Kindly report bugs should you come across any of them. Thanks!
 
@@ -19,7 +19,7 @@ while confirm_input == '':
         a = ''
         while a == '':
             print('a = ', end = '')
-            a = input()
+            a = eval(input())
             if a == '':
                 print('Please enter a value for a.')
 
@@ -28,7 +28,7 @@ while confirm_input == '':
         b = ''
         while b == '':
             print('b = ', end = '')
-            b = input()
+            b = eval(input())
             if b == '':
                 print('Please enter a value for b.')
                 
@@ -38,7 +38,7 @@ while confirm_input == '':
         
         while c == '':
             print('c = ', end = '')
-            c = input()
+            c = eval(input())
             if (str(c) != ''):
                 if (float(a) == (float(0)) and (float(c) == float(0))):
                     print()
@@ -55,7 +55,7 @@ while confirm_input == '':
         d = ''
         while d == '':
             print('d = ', end = '')
-            d = input()
+            d = eval(input())
             if d == '':
                 print('Please enter a value for b.')
                 
@@ -131,7 +131,7 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         x0 = ''
         while x0 == '':
             print('x0 = ', end = '')
-            x0 = input()
+            x0 = eval(input())
             if x0 == '':
                 print('Please enter a value for x0.')
                 
@@ -140,7 +140,7 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         dx = ''
         while dx == '' or float(0):
             print('dx = ', end = '')
-            dx = input()
+            dx = eval(input())
             if dx == '' :
                 print('Please enter a value for dx.')
             elif (float(dx) == float(0)):
@@ -152,7 +152,7 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
         sp = ''
         while sp == '' or ((float(sp)) < (float(dx))):
             print('sp = ', end = '')
-            sp = input()      
+            sp = eval(input())      
             if sp == ('') :
                 print('Please enter a value for sp.')
             elif ((float(sp)) < ((float(dx)))):
