@@ -330,7 +330,7 @@ and divergence indicates no solution is present. Solution is the x-value obtaine
             print("Conclusion: The 2 lines are parallel. They never intersect each other in Euclidean space. There is no solution.")
         else:
             print()
-            print("Conclusion: The 2 lines are exactly the same! They have infinitely many solutions.)
+            print("Conclusion: The 2 lines are exactly the same! They have infinitely many solutions.")
 
     elif ((PIS == True) and (PD == False)):
         print()
