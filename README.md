@@ -8,7 +8,7 @@ Acknowledgement:
 
 Just to say thank you to:
 
-The Orbiter Forum community for their kind support and constructive critism. Special thanks to programmers like Face (Friedrich), tl8roy (Tristan), Xyon (Josh), Ironrain (Derk), woo482 (Adam) for their support. Friedrich and Tristian are the ones who suggested me to learn Python and help with me with installation of the CPython interpreter.
+The Orbiter Forum community for their kind support and constructive critism. Special thanks to programmers like Face (Friedrich), tl8roy (Tristan), Xyon (Josh), Ironrain (Derk), woo482 (Adam) for their support. Friedrich and Tristian are the ones who suggested me to learn Python and help with me with the installation of the CPython interpreter.
 Can never forget you April fool jokes, Friedrich! (He suggested me to learn COBOL!)
 
 The Pythonistas and Pythoneers like Al Swigart who creates very nice books like Automate the Boring Stuff with Python, which is a very nice introduction book to Python programming for beginners who do not have any programming experience, let alone Python experience.
