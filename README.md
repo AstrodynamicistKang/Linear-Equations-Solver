@@ -4,7 +4,9 @@ This Python project aims to build a linear equation solver program. Users are re
 The solver works for any numerical inputs, including fractions, exponentials, additions and subtraction, just to name a few.
 Have fun!
 
-Acknolwedgement:
+Acknowledgement:
+
+Just to say thank you to:
 
 The Orbiter Forum community for their kind support and constructive critism. Special thanks to programmers like Face (Friedrich), tl8roy (Tristian), Xyon (Josh), Ironrain (Derk), woo482 (Adam) for their support. Friedrich and Tristian are the ones who suggested me to learn Python and help with me with installation of the CPython interpreter.
 Can never forget you April fool jokes, Friedrich! (He suggested me to learn COBOL!)
