@@ -15,16 +15,6 @@ while confirm_input == '':
     while confirm_input == '' :
         print('Please enter the relevant constant values when prompted.')
         print()
-
-##  The following codes determine if a user's input is a string. But it does not allow fraction inputs like 2/3 or
-##  arithmetic experssions while doing assignments at the same time, such as x = 2+3
-##      a = ''
-##      while a == '':
-##          print('a = ', end = '')
-##          a = input()
-##          if type(a) == str :
-##              print('Please input a numerical value only.')
-
         
         print('a = ', end = '')
         a = eval(input())
@@ -53,39 +43,16 @@ while confirm_input == '':
             print()
             print('Confirm inputs? Y/N')
 
-            confirm_input = str(input())
+            confirm_input = str(input()).lower()
             
             if confirm_input == 'n' :
                 confirm_input = ''
                 break
             elif confirm_input == 'no' :
                 confirm_input = ''
-                break
-            elif confirm_input == 'No' :
-                confirm_input = ''
-                break
-            elif confirm_input == 'nO' :
-                confirm_input = ''
-                break
-            elif confirm_input == 'NO' :
-                confirm_input = ''
-                break
-            elif confirm_input == 'N' :
-                confirm_input = ''
-                break
             elif confirm_input == 'y' :
                 break
             elif confirm_input == 'yes' :
-                break
-            elif confirm_input == 'Yes' :
-                break
-            elif confirm_input == 'YEs' :
-                break
-            elif confirm_input == 'YeS' :
-                break
-            elif confirm_input =='YES' :
-                break
-            elif confirm_input =='Y' :
                 break
             else :
                 print()
@@ -96,9 +63,6 @@ while confirm_input == '':
         if confirm_input == '' :
             print()
             continue
-
-
-    # 'y' or 'yes' or 'Yes' or 'YEs' or 'YeS' or 'YeS' or 'YES' or 'Y' or 'n' or 'no' or 'No' or 'nO' or 'NO' or 'N' (Too lazy to copy so many words. So keep them here in case I need them.)
 
     print()
     
@@ -116,7 +80,7 @@ while confirm_input == '':
         print()
         print('Thanks for trying out the program. Would you like to try the program again with other linear equation(s).? Y/N')
 
-        confirm_input = str(input())
+        confirm_input = str(input()).lower()
 
         if confirm_input == 'n' :
             print('Have a nice day then!')
@@ -124,37 +88,10 @@ while confirm_input == '':
         elif confirm_input == 'no' :
             print('Have a nice day then!')
             break
-        elif confirm_input == 'No' :
-            print('Have a nice day then!')
-            break
-        elif confirm_input == 'nO' :
-            print('Have a nice day then!')
-            break
-        elif confirm_input == 'NO' :
-            print('Have a nice day then!')
-            break
-        elif confirm_input == 'N' :
-            print('Have a nice day then!')
-            break
         elif confirm_input == 'y' :
             confirm_input = ''
             break
         elif confirm_input == 'yes' :
-            confirm_input = ''
-            break
-        elif confirm_input == 'Yes' :
-            confirm_input = ''
-            break
-        elif confirm_input == 'YEs' :
-            confirm_input = ''
-            break
-        elif confirm_input == 'YeS' :
-            confirm_input = ''
-            break
-        elif confirm_input =='YES' :
-            confirm_input = ''
-            break
-        elif confirm_input =='Y' :
             confirm_input = ''
             break
         else :
