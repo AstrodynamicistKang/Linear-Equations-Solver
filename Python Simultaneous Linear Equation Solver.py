@@ -15,27 +15,49 @@ while confirm_input == '':
     while confirm_input == '' :
         print('Please enter the relevant constant values when prompted.')
         print()
-        
-        print('a = ', end = '')
-        a = eval(input())
-                
-        print('b = ', end = '')
-        b = eval(input())
-                
+
+        a = ''
+        while a == '': 
+            print('a = ', end = '')
+            try:
+                a = eval(input())
+            except (NameError, SyntaxError):
+                print('Please enter a numerical value only and not alphabetical character(s).')
+                a = ''
+
+        b = ''
+        while b == '':
+            print('b = ', end = '')
+            try:
+                b = eval(input())
+            except (NameError, SyntaxError):
+                print('Please enter a numerical value only and not alphabetical character(s).')
+                b = ''
+
         c = ''
         while c == '':
             print('c = ', end = '')
-            c = eval(input())
-            if a == 0 and c == 0:
-                print()
-                print('Since a = 0, c MUST NOT equal to 0 or there will be no 2 simultaneous linear equations to be solved.')
-                print()
-                print('Please try again.')
+            try:
+                c = eval(input())
+                if a == 0 and c == 0:
+                    print()
+                    print('Since a = 0, c MUST NOT equal to 0 or there will be no 2 simultaneous linear equations to be solved.')
+                    print()
+                    print('Please try again.')
+                    c = ''
+            except (NameError, SyntaxError):
+                print('Please enter a numerical value only and not alphabetical character(s).')
                 c = ''
-        
-        print('d = ', end = '')
-        d = eval(input())
 
+        d = ''
+        while d == '':
+            print('d = ', end = '')
+            try:
+                d = eval(input())
+            except (NameError, SyntaxError):
+                print('Please enter a numerical value only and not alphabetical character(s).')
+                d = ''
+                
         confirm_input = 'Try Again'
         while confirm_input == 'Try Again' :
             print()
