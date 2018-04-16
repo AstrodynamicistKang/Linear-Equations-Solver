@@ -4,15 +4,11 @@
 
 # This Python program is a simulateneous linear equation solver.  
 
-confirm_input = ''
-
-while confirm_input == '':
+while True:
     print('Welcome to the linear equation solver. The linear equations defined are in the slope-intercept forms y = ax + b and y = cx + d respectively.')
     print()
 
-    confirm_input = ''
-
-    while confirm_input == '' :
+    while True:
         print('Please enter the relevant constant values when prompted.')
         print()
 
@@ -22,7 +18,7 @@ while confirm_input == '':
             try:
                 a = eval(input())
             except (NameError, SyntaxError):
-                print('Please enter a numerical value only and not alphabetical character(s).')
+                print('Please enter numerical values only.')
                 a = ''
 
         b = ''
@@ -31,7 +27,7 @@ while confirm_input == '':
             try:
                 b = eval(input())
             except (NameError, SyntaxError):
-                print('Please enter a numerical value only and not alphabetical character(s).')
+                print('Please enter numerical values only.')
                 b = ''
 
         c = ''
@@ -46,7 +42,7 @@ while confirm_input == '':
                     print('Please try again.')
                     c = ''
             except (NameError, SyntaxError):
-                print('Please enter a numerical value only and not alphabetical character(s).')
+                print('Please enter numerical values only.')
                 c = ''
 
         d = ''
@@ -55,11 +51,10 @@ while confirm_input == '':
             try:
                 d = eval(input())
             except (NameError, SyntaxError):
-                print('Please enter a numerical value only and not alphabetical character(s).')
+                print('Please enter numerical values only.')
                 d = ''
                 
-        confirm_input = 'Try Again'
-        while confirm_input == 'Try Again' :
+        while True:
             print()
             print('The equations are y = ' + str(a) + 'x+' + str(b) + ' and y = ' + str(c) + 'x+' + str(d) + '.')
             print()
@@ -67,25 +62,21 @@ while confirm_input == '':
 
             confirm_input = str(input()).lower()
             
-            if confirm_input == 'n' :
-                confirm_input = ''
+            if confirm_input == ('n' or 'no'):
                 break
-            elif confirm_input == 'no' :
-                confirm_input = ''
-            elif confirm_input == 'y' :
-                break
-            elif confirm_input == 'yes' :
+            elif confirm_input == ('y' or 'yes'):
                 break
             else :
                 print()
                 print('Invalid input. Please enter yes/no.')
-                confirm_input = 'Try Again'
                 continue
             
-        if confirm_input == '' :
+        if confirm_input == ('n' or 'no'):
             print()
             continue
-
+        elif confirm_input == ('y' or 'yes'):
+            break
+            
     print()
     
     if a == c:
@@ -97,31 +88,24 @@ while confirm_input == '':
         x = (d - b)/(a - c)
         print("The solution is x = " + str(x)+ ".")
 
-    confirm_input = 'Try Again'
-    while confirm_input == 'Try Again':
+    while True:
         print()
         print('Thanks for trying out the program. Would you like to try the program again with other linear equation(s).? Y/N')
 
         confirm_input = str(input()).lower()
 
-        if confirm_input == 'n' :
+        if confirm_input == ('n' or 'no'):
             print('Have a nice day then!')
             break
-        elif confirm_input == 'no' :
-            print('Have a nice day then!')
-            break
-        elif confirm_input == 'y' :
-            confirm_input = ''
-            break
-        elif confirm_input == 'yes' :
-            confirm_input = ''
+        elif confirm_input == ('y' or 'yes'):
             break
         else :
             print()
             print("Invalid input. Please enter 'Yes' or No'.")
-            confirm_input = 'Try Again'
             continue
-        
-    if confirm_input == '':
+
+    if confirm_input == ('n' or 'no'):
+        break
+    elif confirm_input == ('y' or 'yes'):
         print()
         continue
